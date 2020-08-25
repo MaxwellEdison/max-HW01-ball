@@ -1,0 +1,99 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &8740364379590944115
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 515646362348664771}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8c6d4b48ed799d5459260f3bb2a5007a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _movementBonus: 1
+  _powerParticles: {fileID: 0}
+  _powerSound: {fileID: 0}
+  powerDur: 10
+--- !u!1001 &8782397493876752700
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 9135171821712029408, guid: d9a59691b2e5d7b4b82f6982e985ddd1,
+        type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: f2bd0be87c3eb764397cffd522991d23, type: 2}
+    - target: {fileID: 9135171821712029410, guid: d9a59691b2e5d7b4b82f6982e985ddd1,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 9135171821712029410, guid: d9a59691b2e5d7b4b82f6982e985ddd1,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 9135171821712029410, guid: d9a59691b2e5d7b4b82f6982e985ddd1,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 2.12
+      objectReference: {fileID: 0}
+    - target: {fileID: 9135171821712029410, guid: d9a59691b2e5d7b4b82f6982e985ddd1,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9135171821712029410, guid: d9a59691b2e5d7b4b82f6982e985ddd1,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9135171821712029410, guid: d9a59691b2e5d7b4b82f6982e985ddd1,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9135171821712029410, guid: d9a59691b2e5d7b4b82f6982e985ddd1,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 9135171821712029410, guid: d9a59691b2e5d7b4b82f6982e985ddd1,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9135171821712029410, guid: d9a59691b2e5d7b4b82f6982e985ddd1,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9135171821712029410, guid: d9a59691b2e5d7b4b82f6982e985ddd1,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9135171821712029410, guid: d9a59691b2e5d7b4b82f6982e985ddd1,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9135171821712029439, guid: d9a59691b2e5d7b4b82f6982e985ddd1,
+        type: 3}
+      propertyPath: m_Name
+      value: Invincibility
+      objectReference: {fileID: 0}
+    m_RemovedComponents:
+    - {fileID: 4222536814528699180, guid: d9a59691b2e5d7b4b82f6982e985ddd1, type: 3}
+  m_SourcePrefab: {fileID: 100100000, guid: d9a59691b2e5d7b4b82f6982e985ddd1, type: 3}
+--- !u!1 &515646362348664771 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 9135171821712029439, guid: d9a59691b2e5d7b4b82f6982e985ddd1,
+    type: 3}
+  m_PrefabInstance: {fileID: 8782397493876752700}
+  m_PrefabAsset: {fileID: 0}

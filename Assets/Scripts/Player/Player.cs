@@ -1,16 +1,27 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 
 [RequireComponent(typeof(BallMotor))]
 public class Player : MonoBehaviour
 {
+    [SerializeField] int _maxHealth = 3;
+    int _currentHealth;
+   public  bool freezeHealth = false;
+    [SerializeField] int _currentScore;
+
     BallMotor _ballMotor;
 
     private void Awake()
     {
         _ballMotor = GetComponent<BallMotor>();
     }
+
+    private void Start()
+    {
+        //set current health to max health on start
+        _currentHealth = _maxHealth;
+        _currentScore = 0;
+    }
+
 
     private void FixedUpdate()
     {
@@ -27,4 +38,42 @@ public class Player : MonoBehaviour
 
         _ballMotor.Move(movement);
     }
+    //increases health by int 'amount'
+    public void IncreaseHealth(int amount)
+    {
+        _currentHealth = Mathf.Clamp(_currentHealth, 0, _maxHealth);
+        Debug.Log("player's health: " + _currentHealth);
+    }
+    //decreases health by int 'amount'
+    public void DecreaseHealth(int amount)
+    {
+        if (freezeHealth != true)
+        {
+            _currentHealth -= amount;
+            Debug.Log("Player's health: " + _currentHealth);
+            //if health is less than or equal to 0, kill player
+            if (_currentHealth <= 0)
+            {
+                Kill();
+                //X n X
+            }
+        } 
+
+
+    }
+
+    public void keepScore(int amount)
+    {
+        _currentScore += amount;
+        Debug.Log("Player Score: " + _currentScore);
+    }    
+
+    //how do I kill?
+    public void Kill()
+    {
+        gameObject.SetActive(false);
+        //play particles
+        //play sounds
+    }
+
 }

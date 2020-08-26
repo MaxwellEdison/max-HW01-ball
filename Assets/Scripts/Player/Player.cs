@@ -4,10 +4,9 @@
 public class Player : MonoBehaviour
 {
     [SerializeField] int _maxHealth = 3;
-    int _currentHealth;
-   public  bool freezeHealth = false;
-    [SerializeField] int _currentScore;
-
+    public int _currentHealth;
+    public  bool freezeHealth = false;
+    [SerializeField] public int _currentScore;
     BallMotor _ballMotor;
 
     private void Awake()
@@ -41,6 +40,7 @@ public class Player : MonoBehaviour
     //increases health by int 'amount'
     public void IncreaseHealth(int amount)
     {
+        _currentHealth += amount;
         _currentHealth = Mathf.Clamp(_currentHealth, 0, _maxHealth);
         Debug.Log("player's health: " + _currentHealth);
     }
@@ -51,6 +51,7 @@ public class Player : MonoBehaviour
         {
             _currentHealth -= amount;
             Debug.Log("Player's health: " + _currentHealth);
+
             //if health is less than or equal to 0, kill player
             if (_currentHealth <= 0)
             {
@@ -71,7 +72,11 @@ public class Player : MonoBehaviour
     //how do I kill?
     public void Kill()
     {
-        gameObject.SetActive(false);
+        if (freezeHealth != true) 
+        {
+            gameObject.SetActive(false);
+        }
+
         //play particles
         //play sounds
     }

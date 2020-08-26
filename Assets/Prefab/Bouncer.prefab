@@ -123,3 +123,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a7eb1a88a1d218e4184cdd7d06a7a436, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _damageAmount: 1
+  _impactParticles: {fileID: 4008843494495058997, guid: c7ac24ef28e74994fba15892084121ac,
+    type: 3}
+  _impactSound: {fileID: 8300000, guid: 1f429afbcc98985408605fa673867b0f, type: 3}
+  thrust: 20

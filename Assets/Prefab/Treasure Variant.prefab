@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _movementSpeed: 1
   _collectParticles: {fileID: 0}
-  _collectSound: {fileID: 0}
+  _collectSound: {fileID: 8300000, guid: 9740d71c02f327542a824f5ffc076c2b, type: 3}
   _treasureValue: 1
 --- !u!1001 &5638964846451195779
 PrefabInstance:

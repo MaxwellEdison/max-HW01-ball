@@ -3,7 +3,10 @@ guid: 8c6d4b48ed799d5459260f3bb2a5007a
 MonoImporter:
   externalObjects: {}
   serializedVersion: 2
-  defaultReferences: []
+  defaultReferences:
+  - _powerParticles: {fileID: 4008843494495058997, guid: 636d690588627bd4ebca0ec58790daae,
+      type: 3}
+  - _powerSound: {instanceID: 0}
   executionOrder: 0
   icon: {instanceID: 0}
   userData: 

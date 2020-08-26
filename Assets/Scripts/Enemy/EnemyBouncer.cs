@@ -1,5 +1,4 @@
-﻿using UnityEditor.Experimental.GraphView;
-using UnityEngine;
+﻿using UnityEngine;
 
 public class EnemyBouncer : Enemy
 {
@@ -21,7 +20,7 @@ public class EnemyBouncer : Enemy
         offset = transform.position - player.transform.position;
         Debug.Log("Player offset = " + offset);
         Rigidbody pRig = player.GetComponent<Rigidbody>();
-        pRig.AddForce(offset.x * thrust, offset.y*thrust,offset.z*thrust, ForceMode.VelocityChange);
+        pRig.AddForce(offset.x * thrust, offset.y * thrust, offset.z * thrust, ForceMode.VelocityChange);
         Debug.Log("boing");
     }
 }

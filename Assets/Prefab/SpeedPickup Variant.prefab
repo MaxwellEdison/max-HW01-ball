@@ -12,6 +12,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ff6c95f3c0313c44cbb8aa5dfb6c0a51, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _movementSpeed: 1
+  _collectParticles: {fileID: 4008843494495058997, guid: 6bbca77f495b0974bafdfe8d02f8153b,
+    type: 3}
+  _collectSound: {fileID: 8300000, guid: 9740d71c02f327542a824f5ffc076c2b, type: 3}
+  _speedAmount: 5
 --- !u!1001 &6117015568750875016
 PrefabInstance:
   m_ObjectHideFlags: 0

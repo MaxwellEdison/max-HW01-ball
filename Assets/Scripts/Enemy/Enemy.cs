@@ -27,11 +27,11 @@ public class Enemy : MonoBehaviour
     }
     protected virtual void ImpactFeedback()
     {
-        //particles
-        if (_impactParticles != null)
-        {
-            _impactParticles = Instantiate(_impactParticles, transform.position, Quaternion.identity);
-        }
+            //particles
+            if (_impactParticles != null)
+            {
+                _impactParticles = Instantiate(_impactParticles, transform.position, Quaternion.identity);
+            }
         // audio
         if (_impactSound != null)
         {
@@ -48,6 +48,7 @@ public class Enemy : MonoBehaviour
     }
     public virtual void PlayerImpact(Player player)
     {
+
         //when the player hits the enemy, decrease player health by _damageAmount
         player.DecreaseHealth(_damageAmount);
     }

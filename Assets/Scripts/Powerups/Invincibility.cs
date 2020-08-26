@@ -1,41 +1,21 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 
 public class Invincibility : PowerUpBase
 {
-/*    public float powerDur = 10f;
-    private bool invincible;
-    private float timeLeft;*/
+    public float invulnDuration = 10f;
 
     protected override void PowerUp(Player player)
     {
+        powerDur = invulnDuration;
         player.freezeHealth = true;
-        Debug.Log("thinga");
-        float timeLeft = powerDur;
         invincible = true;
-        Debug.Log("invincible =" + invincible);
-    }
-
-    private void FixedUpdate()
-    {
-        if (invincible == true)
-        {
-            float timeLeft = powerDur - Time.deltaTime;
-            Debug.Log("time left =" + timeLeft);
-            if (timeLeft <= 0)
-            {
-                invincible = false;
-                Player player = GameObject.Find("PlayerBall").GetComponent<Player>();
-                PowerDown(player);
-                Debug.Log("powering down");
-            }
-        }
     }
 
     protected override void PowerDown(Player player)
     {
+        Debug.Log("Unfreezing health");
         player.freezeHealth = false;
+        gameObject.SetActive(false);
     }
 
 }

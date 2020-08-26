@@ -12,10 +12,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8c6d4b48ed799d5459260f3bb2a5007a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _movementBonus: 1
-  _powerParticles: {fileID: 0}
-  _powerSound: {fileID: 0}
+  _powerParticles: {fileID: 4008843494495058997, guid: 636d690588627bd4ebca0ec58790daae,
+    type: 3}
+  _powerSound: {fileID: 8300000, guid: 415321468b486714aa0fec5a4c36a6bb, type: 3}
   powerDur: 10
+  invincible: 0
+  timeLeft: 0
+  invulnDuration: 10
 --- !u!1001 &8782397493876752700
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -27,7 +30,7 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
-      objectReference: {fileID: 2100000, guid: f2bd0be87c3eb764397cffd522991d23, type: 2}
+      objectReference: {fileID: 2100000, guid: af25a79f7a51f3c4fba261a9cb2559fd, type: 2}
     - target: {fileID: 9135171821712029410, guid: d9a59691b2e5d7b4b82f6982e985ddd1,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -41,7 +44,7 @@ PrefabInstance:
     - target: {fileID: 9135171821712029410, guid: d9a59691b2e5d7b4b82f6982e985ddd1,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: 2.12
+      value: 3.81
       objectReference: {fileID: 0}
     - target: {fileID: 9135171821712029410, guid: d9a59691b2e5d7b4b82f6982e985ddd1,
         type: 3}

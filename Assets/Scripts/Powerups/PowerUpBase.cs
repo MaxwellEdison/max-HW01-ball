@@ -1,19 +1,13 @@
-﻿using UnityEditor.MemoryProfiler;
-using UnityEngine;
+﻿using UnityEngine;
 
 public abstract class PowerUpBase : MonoBehaviour
 {
-
-
-    [SerializeField] float _movementBonus = 1;
     [SerializeField] ParticleSystem _powerParticles;
     [SerializeField] AudioClip _powerSound;
-    public float powerDur = 10f;
+    Player player;
+    public float powerDur;
     public bool invincible;
     public float timeLeft;
-    bool powerUp;
-    Rigidbody _rb;
-    float duration;
 
     private void OnTriggerEnter(Collider other)
     {
@@ -22,8 +16,11 @@ public abstract class PowerUpBase : MonoBehaviour
         {
             PowerUp(player);
             //spawn particles & sfx
+            
             Feedback();
-            gameObject.SetActive(false);
+            gameObject.GetComponent<MeshRenderer>().enabled = false;
+            gameObject.GetComponent<Collider>().enabled = false;
+            timeLeft = powerDur;
         }
     }
 
@@ -31,35 +28,31 @@ public abstract class PowerUpBase : MonoBehaviour
 
     protected abstract void PowerDown(Player player);
 
-    protected float MovementBonus
-    {
-        get
-        {
-            return _movementBonus;
-        }
-    }
-
     private void Awake()
     {
-        
-        _rb = GetComponent<Rigidbody>();
+        player = GameObject.Find("PlayerBall").GetComponent<Player>();
     }
 
    private void FixedUpdate()
     {
         if (invincible == true)
         {
-            float timeLeft = powerDur - Time.deltaTime;
+            timeLeft -= Time.deltaTime;
             Debug.Log("time left =" + timeLeft);
+            //_powerParticles = Instantiate(_powerParticles, player.transform.position, Quaternion.identity);
             if (timeLeft <= 0)
             {
+
                 invincible = false;
-                Player player = GameObject.Find("PlayerBall").GetComponent<Player>();
+
+
                 PowerDown(player);
                 Debug.Log("powering down");
             }
         }
     }
+
+
 
     private void Feedback()
     {
@@ -67,6 +60,8 @@ public abstract class PowerUpBase : MonoBehaviour
         if (_powerParticles != null)
         {
             _powerParticles = Instantiate(_powerParticles, transform.position, Quaternion.identity);
+            
+
         }
         //audio
         if (_powerSound != null)
